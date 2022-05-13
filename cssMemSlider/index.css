@@ -5,7 +5,34 @@
 
 p {
   font-family: Georgia, 'Century Schoolbook L', serif;
-  font-size: 20px;
+  font-size: 1.3em;
+}
+
+label {
+  width: 0.8em;
+  height: 0.8em;
+  background-color: rgb(72, 157, 243);
+  border-radius: 50%;
+}
+
+input {
+  transform: translate(1.7em);
+  z-index: -1;
+}
+
+.label1,
+#radio1 {
+  transform: translate(3.6em);
+}
+
+.label2,
+#radio2 {
+  transform: translate(2.4em);
+}
+
+.label3,
+#radio3 {
+  transform: translate(1.2em);
 }
 
 .wrapper {
@@ -53,7 +80,7 @@ p {
 }
 
 .mem4 {
-  background: url(./img/80bb717dcf4d679afcbe15f3c4b8997e.jpg);
+  background: url(./img/new_ficha.png);
 }
 
 .mem {
@@ -100,8 +127,40 @@ p {
     margin-bottom: 6vh;
   }
   p {
-    font-size: 17px;
+    font-size: 0.9em;
   }
+  .label1,
+  .label2,
+  .label3,
+  .label4,
+  #radio1,
+  #radio2,
+  #radio3,
+  #radio4 {
+    transform: translate(-0.5em);
+  }
+}
+
+label:hover {
+  background: #ffffff;
+}
+
+#radio1:checked + .label1,
+#radio2:checked + .label2,
+#radio3:checked + .label3,
+#radio4:checked + .label4 {
+  background: none;
+  box-sizing: border-box;
+  border: rgb(72, 157, 243) solid 0.15em;
+}
+
+#radio1:checked + .label1:hover,
+#radio2:checked + .label2:hover,
+#radio3:checked + .label3:hover,
+#radio4:checked + .label4:hover {
+  background: none;
+  box-sizing: border-box;
+  border: #ffffff solid 0.15em;
 }
 
 #radio1:checked ~ .mems .mem2,
