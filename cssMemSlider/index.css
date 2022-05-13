@@ -7,41 +7,67 @@
   width: 90vw;
   max-width: 150vh;
   margin: auto;
+  padding: 3vh 3vw 6vh;
   background: #2f2f2f;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0 0.75%;
 }
 
 .mems {
+  order: -2;
   height: 50vw;
   width: 100%;
   max-height: 70vh;
   margin: auto;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 1vh;
+  margin-bottom: 4vh;
+}
+
+.mem-names {
+  order: -1;
 }
 
 .mem1 {
-  background: #70abc1;
+  background: #6aa8b6;
 }
 
 .mem2 {
-  background: #70c180;
+  background: #82b66a;
 }
 
 .mem3 {
-  background: #bdc170;
+  background: #b2b66a;
 }
 
 .mem4 {
-  background: #c17070;
+  background: #7d6ab6;
 }
 
 .mem {
   height: 50vw;
-  width: 85vw;
-  max-width: 140vh;
+  width: 90vw;
+  max-width: 150vh;
   max-height: 70vh;
   margin: auto;
   display: inline-block;
   transition: 0.5s;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+
+.mem-names {
+  flex-grow: 1;
+  display: flex;
+  height: 1vh;
+  margin-bottom: 5vh;
 }
 
 .name1,
@@ -49,10 +75,24 @@
 .name3,
 .name4 {
   display: inline-block;
-  width: 30%;
+  width: 100%;
   background: #2f2f2f;
   transition: 0.5s;
   color: rgb(239, 239, 239);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    justify-content: center;
+  }
+  .radio {
+    margin-bottom: 2vh;
+  }
+  .mem-names {
+    order: 1;
+    width: 100%;
+    margin-bottom: 6vh;
+  }
 }
 
 #radio1:checked ~ .mems .mem2,
