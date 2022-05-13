@@ -1,38 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-p {
-  font-family: Georgia, 'Century Schoolbook L', serif;
-  font-size: 1.3em;
-}
-
-label {
-  width: 0.8em;
-  height: 0.8em;
-  background-color: rgb(72, 157, 243);
-  border-radius: 50%;
-  border: 0.5em solid #2f2f2f;
-}
-
-input {
-  z-index: -1;
-}
-
-.label1,
-#radio1 {
-  transform: translate(5.5em);
-}
-
-.label2,
-#radio2 {
-  transform: translate(3.7em);
-}
-
-.label3,
-#radio3 {
-  transform: translate(1.9em);
+  transition: 0.5s;
 }
 
 .wrapper {
@@ -47,7 +16,34 @@ input {
   gap: 0 0.75%;
 }
 
-.mems {
+.wrapper label {
+  width: 0.8em;
+  height: 0.8em;
+  background-color: rgb(72, 157, 243);
+  border-radius: 50%;
+  border: 0.5em solid #2f2f2f;
+}
+
+.wrapper .label1,
+#radio1 {
+  transform: translate(5.5em);
+}
+
+.wrapper .label2,
+#radio2 {
+  transform: translate(3.7em);
+}
+
+.wrapper .label3,
+#radio3 {
+  transform: translate(1.9em);
+}
+
+.wrapper input {
+  z-index: -1;
+}
+
+.wrapper .mems {
   order: -2;
   height: 50vw;
   width: 100%;
@@ -62,55 +58,55 @@ input {
   margin-bottom: 4vh;
 }
 
-.mem-names {
-  order: -1;
-  display: inline-block;
-}
-
-.mem1 {
+.wrapper .mems .mem1 {
   background: url(./img/sophisticated\ technologies.png);
 }
 
-.mem2 {
+.wrapper .mems .mem2 {
   background: url(./img/UDP.png);
 }
 
-.mem3 {
+.wrapper .mems .mem3 {
   background: url(./img/suddenly\ work.png);
 }
 
-.mem4 {
+.wrapper .mems .mem4 {
   background: url(./img/new_ficha.png);
 }
 
-.mem {
+.wrapper .mems .mem {
   height: 50vw;
   width: 90vw;
   max-width: 150vh;
   max-height: 70vh;
   margin: auto;
   display: inline-block;
-  transition: 0.5s;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto 100%;
 }
 
-.mem-names {
+.wrapper .mem-names {
+  order: -1;
+  display: inline-block;
   flex-grow: 1;
   display: flex;
   height: 1vh;
   margin-bottom: 5vh;
 }
 
-.name1,
-.name2,
-.name3,
-.name4 {
+.wrapper .mem-names p {
+  font-family: Georgia, 'Century Schoolbook L', serif;
+  font-size: 1.3em;
+}
+
+.wrapper .mem-names .name1,
+.wrapper .mem-names .name2,
+.wrapper .mem-names .name3,
+.wrapper .mem-names .name4 {
   display: inline-block;
   width: 100%;
   background: #2f2f2f;
-  transition: 0.5s;
   color: rgb(239, 239, 239);
 }
 
@@ -118,33 +114,39 @@ input {
   .wrapper {
     justify-content: center;
   }
-  .mem-names {
+  .wrapper label {
+    margin-bottom: 0.7em;
+  }
+  .wrapper .label1 {
+    transform: translate(1.4em);
+  }
+  .wrapper .label2 {
+    transform: translate(0.1em);
+  }
+  .wrapper .label3 {
+    transform: translate(-1.2em);
+  }
+  .wrapper .label4 {
+    transform: translate(-2.5em);
+  }
+  .wrapper .mem-names {
     order: 1;
     width: 100%;
     margin-bottom: 2.5em;
   }
-  p {
+  .wrapper .mem-names p {
     font-size: 0.9em;
-  }
-  .label1 {
-    transform: translate(1.4em);
-  }
-  .label2 {
-    transform: translate(0.1em);
-  }
-  .label3 {
-    transform: translate(-1.2em);
-  }
-  .label4 {
-    transform: translate(-2.5em);
-  }
-  label {
-    margin-bottom: 0.7em;
   }
 }
 
-label:hover {
+.wrapper label:hover {
   background: #ffffff;
+  cursor: pointer;
+}
+
+.wrapper label:active {
+  background: #acacac;
+  cursor: pointer;
 }
 
 #radio1:checked + .label1,
