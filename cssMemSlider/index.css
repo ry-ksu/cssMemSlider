@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+p {
+  font-family: Georgia, 'Century Schoolbook L', serif;
+  font-size: 20px;
+}
+
 .wrapper {
   width: 90vw;
   max-width: 150vh;
@@ -32,22 +37,23 @@
 
 .mem-names {
   order: -1;
+  display: inline-block;
 }
 
 .mem1 {
-  background: #6aa8b6;
+  background: url(./img/sophisticated\ technologies.png);
 }
 
 .mem2 {
-  background: #82b66a;
+  background: url(./img/UDP.png);
 }
 
 .mem3 {
-  background: #b2b66a;
+  background: url(./img/suddenly\ work.png);
 }
 
 .mem4 {
-  background: #7d6ab6;
+  background: url(./img/80bb717dcf4d679afcbe15f3c4b8997e.jpg);
 }
 
 .mem {
@@ -86,12 +92,15 @@
     justify-content: center;
   }
   .radio {
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
   }
   .mem-names {
     order: 1;
     width: 100%;
     margin-bottom: 6vh;
+  }
+  p {
+    font-size: 17px;
   }
 }
 
