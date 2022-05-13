@@ -13,26 +13,26 @@ label {
   height: 0.8em;
   background-color: rgb(72, 157, 243);
   border-radius: 50%;
+  border: 0.5em solid #2f2f2f;
 }
 
 input {
-  transform: translate(1.7em);
   z-index: -1;
 }
 
 .label1,
 #radio1 {
-  transform: translate(3.6em);
+  transform: translate(5.5em);
 }
 
 .label2,
 #radio2 {
-  transform: translate(2.4em);
+  transform: translate(3.7em);
 }
 
 .label3,
 #radio3 {
-  transform: translate(1.2em);
+  transform: translate(1.9em);
 }
 
 .wrapper {
@@ -118,26 +118,28 @@ input {
   .wrapper {
     justify-content: center;
   }
-  .radio {
-    margin-bottom: 3vh;
-  }
   .mem-names {
     order: 1;
     width: 100%;
-    margin-bottom: 6vh;
+    margin-bottom: 2.5em;
   }
   p {
     font-size: 0.9em;
   }
-  .label1,
-  .label2,
-  .label3,
-  .label4,
-  #radio1,
-  #radio2,
-  #radio3,
-  #radio4 {
-    transform: translate(-0.5em);
+  .label1 {
+    transform: translate(1.4em);
+  }
+  .label2 {
+    transform: translate(0.1em);
+  }
+  .label3 {
+    transform: translate(-1.2em);
+  }
+  .label4 {
+    transform: translate(-2.5em);
+  }
+  label {
+    margin-bottom: 0.7em;
   }
 }
 
@@ -150,8 +152,9 @@ label:hover {
 #radio3:checked + .label3,
 #radio4:checked + .label4 {
   background: none;
-  box-sizing: border-box;
-  border: rgb(72, 157, 243) solid 0.15em;
+  border: 0.5em solid #2f2f2f;
+  outline: rgb(72, 157, 243) solid 0.15em;
+  outline-offset: -0.6em;
 }
 
 #radio1:checked + .label1:hover,
@@ -159,8 +162,9 @@ label:hover {
 #radio3:checked + .label3:hover,
 #radio4:checked + .label4:hover {
   background: none;
-  box-sizing: border-box;
-  border: #ffffff solid 0.15em;
+  border: 0.5em solid #2f2f2f;
+  outline: #ffffff solid 0.15em;
+  outline-offset: -0.6em;
 }
 
 #radio1:checked ~ .mems .mem2,
