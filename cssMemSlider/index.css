@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 90vw;
+  max-width: 150vh;
+  margin: auto;
+  background: #2f2f2f;
+}
+
+.mems {
+  height: 50vw;
+  width: 100%;
+  max-height: 70vh;
+  margin: auto;
+  overflow: hidden;
+}
+
+.mem1 {
+  background: #70abc1;
+}
+
+.mem2 {
+  background: #70c180;
+}
+
+.mem3 {
+  background: #bdc170;
+}
+
+.mem4 {
+  background: #c17070;
+}
+
+.mem {
+  height: 50vw;
+  width: 85vw;
+  max-width: 140vh;
+  max-height: 70vh;
+  margin: auto;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.name1,
+.name2,
+.name3,
+.name4 {
+  display: inline-block;
+  width: 30%;
+  background: #2f2f2f;
+  transition: 0.5s;
+  color: rgb(239, 239, 239);
+}
+
+#radio1:checked ~ .mems .mem2,
+#radio1:checked ~ .mems .mem3,
+#radio1:checked ~ .mems .mem4,
+#radio1:checked ~ .mem-names .name2,
+#radio1:checked ~ .mem-names .name3,
+#radio1:checked ~ .mem-names .name4 {
+  width: 0;
+  font-size: 0;
+  color: #2f2f2f;
+}
+
+#radio2:checked ~ .mems .mem1,
+#radio2:checked ~ .mems .mem3,
+#radio2:checked ~ .mems .mem4,
+#radio2:checked ~ .mem-names .name1,
+#radio2:checked ~ .mem-names .name3,
+#radio2:checked ~ .mem-names .name4 {
+  width: 0;
+  font-size: 0;
+  color: #2f2f2f;
+}
+
+#radio3:checked ~ .mems .mem1,
+#radio3:checked ~ .mems .mem2,
+#radio3:checked ~ .mems .mem4,
+#radio3:checked ~ .mem-names .name1,
+#radio3:checked ~ .mem-names .name2,
+#radio3:checked ~ .mem-names .name4 {
+  width: 0;
+  font-size: 0;
+  color: #2f2f2f;
+}
+
+#radio4:checked ~ .mems .mem1,
+#radio4:checked ~ .mems .mem2,
+#radio4:checked ~ .mems .mem3,
+#radio4:checked ~ .mem-names .name1,
+#radio4:checked ~ .mem-names .name2,
+#radio4:checked ~ .mem-names .name3 {
+  width: 0;
+  font-size: 0;
+  color: #2f2f2f;
+}
