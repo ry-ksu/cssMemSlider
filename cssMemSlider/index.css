@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+
+.wrapper {
+  width: 90vw;
+  max-width: 150vh;
+  margin: auto;
+  padding: 3vh 3vw 6vh;
+  background: #2f2f2f;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0 0.75%;
+}
+
+.wrapper label {
+  width: 0.8em;
+  height: 0.8em;
+  background-color: rgb(72, 157, 243);
+  border-radius: 50%;
+  border: 0.5em solid #2f2f2f;
+}
+
+.wrapper .label1,
+#radio1 {
+  transform: translate(5.5em);
+}
+
+.wrapper .label2,
+#radio2 {
+  transform: translate(3.7em);
+}
+
+.wrapper .label3,
+#radio3 {
+  transform: translate(1.9em);
+}
+
+.wrapper input {
+  z-index: -1;
+}
+
+.wrapper .mems {
+  order: -2;
+  height: 50vw;
+  width: 100%;
+  max-height: 70vh;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2f2f2f;
+  border-radius: 1vh;
+  margin-bottom: 4vh;
+}
+
+.wrapper .mems .mem1 {
+  background: url(./img/sophisticated\ technologies.png);
+}
+
+.wrapper .mems .mem2 {
+  background: url(./img/UDP.png);
+}
+
+.wrapper .mems .mem3 {
+  background: url(./img/suddenly\ work.png);
+}
+
+.wrapper .mems .mem4 {
+  background: url(./img/new_ficha.png);
+}
+
+.wrapper .mems .mem {
+  height: 50vw;
+  width: 90vw;
+  max-width: 150vh;
+  max-height: 70vh;
+  margin: auto;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+
+.wrapper .mem-names {
+  order: -1;
+  display: inline-block;
+  flex-grow: 1;
+  display: flex;
+  height: 1vh;
+  margin-bottom: 5vh;
+}
+
+.wrapper .mem-names p {
+  font-family: Georgia, 'Century Schoolbook L', serif;
+  font-size: 1.3em;
+}
+
+.wrapper .mem-names .name1,
+.wrapper .mem-names .name2,
+.wrapper .mem-names .name3,
+.wrapper .mem-names .name4 {
+  display: inline-block;
+  width: 100%;
+  background: #2f2f2f;
+  color: rgb(239, 239, 239);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    justify-content: center;
+  }
+  .wrapper label {
+    margin-bottom: 0.7em;
+  }
+  .wrapper .label1 {
+    transform: translate(1.4em);
+  }
+  .wrapper .label2 {
+    transform: translate(0.1em);
+  }
+  .wrapper .label3 {
+    transform: translate(-1.2em);
+  }
+  .wrapper .label4 {
+    transform: translate(-2.5em);
+  }
+  .wrapper .mem-names {
+    order: 1;
+    width: 100%;
+    margin-bottom: 2.5em;
+  }
+  .wrapper .mem-names p {
+    font-size: 0.9em;
+  }
+}
+
+.wrapper label:hover {
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.wrapper label:active {
+  background: #acacac;
+  cursor: pointer;
+}
+
+#radio1:checked + .label1,
+#radio2:checked + .label2,
+#radio3:checked + .label3,
+#radio4:checked + .label4 {
+  background: none;
+  border: 0.5em solid #2f2f2f;
+  outline: rgb(72, 157, 243) solid 0.15em;
+  outline-offset: -0.6em;
+}
+
+#radio1:checked + .label1:hover,
+#radio2:checked + .label2:hover,
+#radio3:checked + .label3:hover,
+#radio4:checked + .label4:hover {
+  background: none;
+  border: 0.5em solid #2f2f2f;
+  outline: #ffffff solid 0.15em;
+  outline-offset: -0.6em;
+}
+
+#radio1:checked ~ .mems .mem2,
+#radio1:checked ~ .mems .mem3,
+#radio1:checked ~ .mems .mem4,
+#radio1:checked ~ .mem-names .name2,
+#radio1:checked ~ .mem-names .name3,
+#radio1:checked ~ .mem-names .name4 {
+  width: 0;
+  font-size: 0;
+  color: #2f2f2f;
+}
+
+#radio2:checked ~ .mems .mem1,
+#radio2:checked ~ .mems .mem3,
+#radio2:checked ~ .mems .mem4,
+#radio2:checked ~ .mem-names .name1,
+#radio2:checked ~ .mem-names .name3,
+#radio2:checked ~ .mem-names .name4 {
+  width: 0;
+  font-size: 0;
+  color: #2f2f2f;
+}
+
+#radio3:checked ~ .mems .mem1,
+#radio3:checked ~ .mems .mem2,
+#radio3:checked ~ .mems .mem4,
+#radio3:checked ~ .mem-names .name1,
+#radio3:checked ~ .mem-names .name2,
+#radio3:checked ~ .mem-names .name4 {
+  width: 0;
+  font-size: 0;
+  color: #2f2f2f;
+}
+
+#radio4:checked ~ .mems .mem1,
+#radio4:checked ~ .mems .mem2,
+#radio4:checked ~ .mems .mem3,
+#radio4:checked ~ .mem-names .name1,
+#radio4:checked ~ .mem-names .name2,
+#radio4:checked ~ .mem-names .name3 {
+  width: 0;
+  font-size: 0;
+  color: #2f2f2f;
+}
